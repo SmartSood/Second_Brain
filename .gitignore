@@ -1,0 +1,66 @@
+# =======================
+# Node.js
+# =======================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+.cache/
+.temp/
+
+# =======================
+# Environment
+# =======================
+.env
+.env.*     # if you use multiple env files like .env.local, .env.development
+
+# =======================
+# Logs
+# =======================
+logs/
+*.log
+*.log.*
+
+# =======================
+# OS / Editor Specific
+# =======================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# =======================
+# IDEs
+# =======================
+.vscode/
+.idea/
+*.code-workspace
+
+# =======================
+# TypeScript
+# =======================
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# =======================
+# PM2 / Process Manager
+# =======================
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# =======================
+# Optional: GitHub Copilot
+# =======================
+copilot.json
+
+# =======================
+# Frontend (if full-stack)
+# =======================
+client/node_modules/
+client/.env
+client/dist/
+client/build/
