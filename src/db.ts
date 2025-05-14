@@ -35,13 +35,26 @@ const UserModel = mongoose.model<IUser>('User', UserSchema);
 const ContentSchema=new Schema({
   title:String,
   link:String,
+  type:String,
   tags:[{type:mongoose.Types.ObjectId,ref:'Tag'}],
+  userId:{
+    type:mongoose.Types.ObjectId,
+    ref:'User',
+    required:true,
+  }
+})
+
+
+const LinkSchema=new Schema({
+  hash:String,
   userId:{
     type:mongoose.Types.ObjectId,
     ref:'User',
     required:true
   }
 })
+
+const LinkModel=mongoose.model("Links",LinkSchema);
 const ContentModel=mongoose.model('Content',ContentSchema);
-export {UserModel,ContentModel};
+export {UserModel,ContentModel,LinkModel};
 

@@ -8,13 +8,16 @@ import jwt from "jsonwebtoken";
 export const userMiddleware=(req:Request,res:Response,next:NextFunction)=>{
     const header=req.headers["token"];
     const decoded=jwt.verify(header as string,JWT_PASSWORD)
+    
     if(decoded){
         //@ts-ignore
         req.userId=decoded.id;
         next();
-
+                //@ts-ignore
+        console.log(req.userId);
 
     }else{
+        console.log("not loggee in")
         res.status(403).json({message:"You are not Logged in"});
     }
 }
